@@ -23,7 +23,7 @@ public class Hackathon {
      */
     public static void main(String[] args) throws IOException {
         Parser parser = new CSVParser();
-        List<String[]> parsed = parser.parseFile(new File("C:\\Users\\myche\\Desktop", "info.csv"));
+        List<String[]> parsed = parser.parseFile(new File("./run/", "info.csv"));
         List<Chapter> chapters = parser.organize(parsed);
     }
 
