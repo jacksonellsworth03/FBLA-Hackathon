@@ -19,7 +19,9 @@ public class CSVParser implements Parser<Chapter> {
     public List<Chapter> organize(List<String[]> lines) {
         List<Chapter> chapters = new ArrayList<>();
         /* Hides the header from the program's eyes. */
-        lines.remove(0);
+        if(lines.size() > 0) {
+            lines.remove(0);
+        }
 
         for (String[] line : lines) {
             if (line.length == 11) {
@@ -47,6 +49,8 @@ public class CSVParser implements Parser<Chapter> {
         for (String string : unsplit) {
             lines.add(string.split(","));
         }
+
+        reader.close();
 
         return lines;
     }
