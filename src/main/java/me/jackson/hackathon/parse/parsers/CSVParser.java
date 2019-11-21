@@ -25,11 +25,11 @@ public class CSVParser implements Parser<Chapter> {
 
         for (String[] line : lines) {
             if (line.length == 11) {
-                chapters.add(new Chapter(Integer.parseInt(line[0]), line[1], line[2], line[3], line[4], line[5], line[6], line[7], line[8], line[9], line[10]));
+                chapters.add(new Chapter("TRIPLE", Integer.parseInt(line[0]), line[1], line[2], line[3], line[4], line[5], line[6], line[7], line[8], line[9], line[10]));
             } else if (line.length == 9) {
-                chapters.add(new Chapter(Integer.parseInt(line[0]), line[1], line[2], line[3], line[4], line[5], line[6], line[7], line[8]));
+                chapters.add(new Chapter("DOUBLE", Integer.parseInt(line[0]), line[1], line[2], line[3], line[4], line[5], line[6], line[7], line[8]));
             } else {
-                chapters.add(new Chapter(Integer.parseInt(line[0]), line[1], line[2], line[3], line[4], line[5], line[6]));
+                chapters.add(new Chapter("SINGLE", Integer.parseInt(line[0]), line[1], line[2], line[3], line[4], line[5], line[6]));
             }
         }
 

@@ -20,6 +20,16 @@ public class Chapter implements ParsedObject {
     private final int chapterID;
 
     /**
+     * The type of chapter that it is.
+     *
+     * IE:
+     * SINGLE,
+     * DOUBLE,
+     * TRIPLE.
+     */
+    private final String type;
+
+    /**
      * The name of the chapter's school.
      */
     private String school;
@@ -39,7 +49,8 @@ public class Chapter implements ParsedObject {
      */
     private String primaryAdviser, primaryAdviserEmail, secondaryAdviser, secondaryAdviserEmail, tertiaryAdviser, tertiaryAdviserEmail;
 
-    public Chapter(int chapterID, String school, String mainAddress, String alternateAddress, String phone, String primaryAdviser, String primaryAdviserEmail, String secondaryAdviser, String secondaryAdviserEmail, String tertiaryAdviser, String tertiaryAdviserEmail) {
+    public Chapter(String type, int chapterID, String school, String mainAddress, String alternateAddress, String phone, String primaryAdviser, String primaryAdviserEmail, String secondaryAdviser, String secondaryAdviserEmail, String tertiaryAdviser, String tertiaryAdviserEmail) {
+        this.type = type;
         this.chapterID = chapterID;
         this.school = school;
         this.mainAddress = mainAddress;
@@ -53,7 +64,8 @@ public class Chapter implements ParsedObject {
         this.tertiaryAdviserEmail = tertiaryAdviserEmail;
     }
 
-    public Chapter(int chapterID, String school, String mainAddress, String alternateAddress, String phone, String primaryAdviser, String primaryAdviserEmail, String secondaryAdviser, String secondaryAdviserEmail) {
+    public Chapter(String type, int chapterID, String school, String mainAddress, String alternateAddress, String phone, String primaryAdviser, String primaryAdviserEmail, String secondaryAdviser, String secondaryAdviserEmail) {
+        this.type = type;
         this.chapterID = chapterID;
         this.school = school;
         this.mainAddress = mainAddress;
@@ -65,7 +77,8 @@ public class Chapter implements ParsedObject {
         this.secondaryAdviserEmail = secondaryAdviserEmail;
     }
 
-    public Chapter(int chapterID, String school, String mainAddress, String alternateAddress, String phone, String primaryAdviser, String primaryAdviserEmail) {
+    public Chapter(String type, int chapterID, String school, String mainAddress, String alternateAddress, String phone, String primaryAdviser, String primaryAdviserEmail) {
+        this.type = type;
         this.chapterID = chapterID;
         this.school = school;
         this.mainAddress = mainAddress;
@@ -73,6 +86,10 @@ public class Chapter implements ParsedObject {
         this.phone = phone;
         this.primaryAdviser = primaryAdviser;
         this.primaryAdviserEmail = primaryAdviserEmail;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public int getChapterID() {

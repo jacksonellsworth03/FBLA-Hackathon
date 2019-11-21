@@ -12,7 +12,7 @@ import java.util.List;
  * @author Jackson Ellsworth
  * @since 11/20/2019
  */
-public interface FileWriter<O extends ParsedObject> {
+public interface FileUpdater<O extends ParsedObject> {
 
     /**
      * Writes the necessary file.

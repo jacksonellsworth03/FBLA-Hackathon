@@ -1,3 +1,3 @@
 chapter_id,school_name,school_address_1,school_address_2,school_phone,primary_adviser_name,primary_adviser_email,adviser_name_2,adviser_email_2,adviser_name_3,adviser_email_3
-1,Georgia FBLA High School,1001 Georgia FBLA Drive,"Athens, GA 30601",1234567890,Monty Rhodes,monty@georgiafblaschool.com,,,,
-324,Example High School,1234 Example Lane,"Example, GA 32145",1326459708,Tyler Schott,tyler@exampleschool.com,Devansh Yerpude,devansh@exampleschool.com,Tim Tucker,tim@exampleschool.com
+1,Georgia FBLA High School,1001 Georgia FBLA Drive,"Athens, GA 30601",1234567890,Monty Rhodes
+324,Example High School,1234 Example Lane,"Example, GA 32145",1326459708,Tyler Schott

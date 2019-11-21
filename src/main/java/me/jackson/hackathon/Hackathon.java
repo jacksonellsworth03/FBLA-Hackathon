@@ -3,7 +3,7 @@ package me.jackson.hackathon;
 import me.jackson.hackathon.parse.Parser;
 import me.jackson.hackathon.parse.object.objects.Chapter;
 import me.jackson.hackathon.parse.parsers.CSVParser;
-import me.jackson.hackathon.write.FileWriter;
+import me.jackson.hackathon.write.FileUpdater;
 import me.jackson.hackathon.write.impl.CSVWriter;
 
 import java.io.File;
@@ -34,7 +34,7 @@ public final class Hackathon {
      */
     public static void main(String[] args) throws IOException {
         Parser parser = new CSVParser();
-        FileWriter writer = new CSVWriter();
+        FileUpdater writer = new CSVWriter();
         List<String[]> parsed = parser.parseFile(new File("./run/", "info.csv"));
         List<Chapter> chapters = parser.organize(parsed);
         writer.writeFile(new File("./run/", "info.csv"), chapters);
