@@ -1,5 +1,6 @@
 package me.jackson.hackathon.parse.parsers;
 
+import me.jackson.hackathon.Hackathon;
 import me.jackson.hackathon.parse.Parser;
 import me.jackson.hackathon.parse.object.objects.Chapter;
 
@@ -19,7 +20,7 @@ public class CSVParser implements Parser<Chapter> {
     public List<Chapter> organize(List<String[]> lines) {
         List<Chapter> chapters = new ArrayList<>();
         /* Hides the header from the program's eyes. */
-        if(lines.size() > 0) {
+        if (lines.size() > 0) {
             lines.remove(0);
         }
 
@@ -31,6 +32,10 @@ public class CSVParser implements Parser<Chapter> {
             } else {
                 chapters.add(new Chapter("SINGLE", Integer.parseInt(line[0]), line[1], line[2], line[3], line[4], line[5], line[6]));
             }
+        }
+
+        for (Chapter chapter : chapters) {
+            Hackathon.getApplication().getChapterManager().registerChapter(chapter);
         }
 
         return chapters;
